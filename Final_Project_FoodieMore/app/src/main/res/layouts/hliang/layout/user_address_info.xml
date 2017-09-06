@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/food_5"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/csupa_relative"
+        android:layout_width="250dp"
+        android:layout_height="430dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.68"
+        android:background="#F2F3F4"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/street"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[street:]"
+            android:textSize="20sp"
+            android:layout_marginTop="34dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/phone"
+            android:layout_alignStart="@+id/phone" />
+
+        <TextView
+            android:id="@+id/userStreet"
+            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:text=""
+            android:textSize="20sp"
+            android:layout_marginTop="21dp"
+            android:layout_below="@+id/street"
+            android:layout_alignLeft="@+id/street"
+            android:layout_alignStart="@+id/street" />
+
+        <TextView
+            android:id="@+id/userApt"
+            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:text=""
+            android:textSize="20sp"
+            android:layout_marginTop="26dp"
+            android:layout_below="@+id/userStreet"
+            android:layout_alignLeft="@+id/userStreet"
+            android:layout_alignStart="@+id/userStreet" />
+
+        <TextView
+            android:id="@+id/cityState"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Santa Cruz, CA, 95060"
+            android:textSize="20sp"
+            android:layout_below="@+id/userApt"
+            android:layout_alignLeft="@+id/userApt"
+            android:layout_alignStart="@+id/userApt"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="[phone:]"
+            android:textSize="20sp"
+            android:layout_above="@+id/userPhone"
+            android:layout_alignLeft="@+id/userPhone"
+            android:layout_alignStart="@+id/userPhone"
+            android:layout_marginBottom="17dp" />
+
+        <TextView
+            android:id="@+id/userPhone"
+            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:text=""
+            android:textSize="20sp"
+            android:layout_above="@+id/user_submit"
+            android:layout_alignLeft="@+id/user_submit"
+            android:layout_alignStart="@+id/user_submit"
+            android:layout_marginBottom="51dp" />
+
+        <Button
+            android:id="@+id/user_submit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Edit"
+            android:textSize="20sp"
+            android:background="#13ADF5"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+        <!--android:layout_below="@+id/csupa_phone"-->
+
+        android:layout_alignLeft="@+id/csupa_phone"
+        android:layout_alignStart="@+id/csupa_phone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

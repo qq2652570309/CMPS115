@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/restaurantslist_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="packageapplication.firebase.RestaurantsList">
+
+
+    <ImageView
+        android:id="@+id/loading"
+        android:background="@drawable/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/search_bar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="2dp"
+        android:background="#13ADF5"
+        >
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <EditText
+                android:id="@+id/search_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:hint="Search restaurant name"
+                android:textColorHint="#BCBCBC"
+                android:imeOptions="actionSearch"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_bar"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:onClick="cancelButtonOnClick"
+                android:text="Cancel"/>
+
+        </LinearLayout>
+
+
+
+        <!--android:visibility="invisible"-->
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/rest_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+</LinearLayout>

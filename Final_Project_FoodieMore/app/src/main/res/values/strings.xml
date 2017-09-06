@@ -1,0 +1,27 @@
+<resources>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="app_name">FoodieMore</string>
+
+    <string name="hint_email">Email</string>
+
+    <string name="hint_pwd">Password</string>
+
+    <string name="LOGIN">LOGIN</string>
+
+    <string name="SIGN_UP">SIGN UP</string>
+
+
+    <!--Labels for the dish species-->
+    <string name="species_breakfast">Breakfast</string>
+    <string name="species_lunch">Lunch</string>
+    <string name="species_dinner">Dinner</string>
+    <string name="species_dessert">Dessert</string>
+    <string name="species_main">Main</string>
+
+</resources>

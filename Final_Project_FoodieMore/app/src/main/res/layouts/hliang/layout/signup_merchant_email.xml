@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sea_1"
+    android:weightSum="1">
+
+
+    <RelativeLayout
+        android:id="@+id/csup_relative"
+        android:layout_width="250dp"
+        android:layout_height="430dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.68"
+        android:background="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/merchantImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/merchant_icon"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:id="@+id/msup_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/merchantImage"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:id="@+id/msup_username"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:hint="Email"
+            android:layout_below="@+id/msup_register"
+            android:layout_alignLeft="@+id/msup_password"
+            android:layout_alignStart="@+id/msup_password"
+            android:layout_marginTop="20dp"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/msup_password"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:password="true"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:hint="Password"
+            android:layout_below="@+id/msup_username"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/msup_confirmpassword"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:password="true"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:hint="Confirm Password"
+            android:layout_below="@+id/msup_password"
+            android:layout_alignLeft="@+id/msup_password"
+            android:layout_alignStart="@+id/msup_password"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/msup_next"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Next"
+            android:textSize="20sp"
+            android:background="@drawable/shape_merchant"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/msup_confirmpassword"
+            android:layout_alignStart="@+id/msup_confirmpassword"
+            android:layout_marginBottom="15dp" />
+
+        />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/houseImage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="onClickImage"
+            android:src="@drawable/restaurant_menu_filled" />
+
+        <ImageView
+            android:id="@+id/UserImage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="onClickImage"
+            android:src="@drawable/manager_filled" />
+
+
+        <ImageView
+            android:id="@+id/notificationImage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="onClickImage"
+            android:src="@drawable/notification" />
+
+        <ImageView
+            android:id="@+id/settingImage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="onClickImage"
+            android:src="@drawable/setting_filled" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="3dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        >
+
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            />
+
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            />
+
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:background="#FFFFFF"
+            />
+
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            />
+    </LinearLayout>
+
+        <EditText
+            android:id="@+id/WaitingTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/updateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="updateWaitingTime"
+        android:text="Updating Waiting Time" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/orders_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

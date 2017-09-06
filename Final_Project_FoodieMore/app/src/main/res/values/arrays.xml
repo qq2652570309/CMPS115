@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- These are the options displayed in the gender drop-down Spinner -->
+    <string-array name="food_species_options">
+        <item>@string/species_breakfast</item>
+        <item>@string/species_lunch</item>
+        <item>@string/species_dinner</item>
+    </string-array>
+</resources>

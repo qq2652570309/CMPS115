@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.harlan.myapplication">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/restaurant_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/restaurant_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Initial page for the app -->
+        <activity
+            android:name="com.example.foodiemore.foodiemore.InitialPage"
+            android:theme="@style/NoBarTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Adding new activity "consumer_sign_up_page" -->
+        <activity
+            android:name=".consumer_sign_up_page"
+            android:theme="@style/CustomerBar"/>
+
+        <!-- Adding new activity "success_register" -->
+        <activity android:name=".success_register" />
+
+        <!-- Adding new activity "user_main_page" -->
+        <activity android:name=".user_main_page" />
+        <activity
+            android:name=".Main2Activity"
+            android:label="Foodie More"
+            android:theme="@style/CustomerBar">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+
+        <!-- Adding new activity "user_address_info" -->
+        <activity android:name=".user_address_info"
+            android:theme="@style/CustomerBar">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.harlan.myapplication.Main2Activity" />
+        </activity>
+
+        <!-- Adding new activity "user_address_info_edit" -->
+        <activity android:name=".user_address_info_edit"
+            android:theme="@style/CustomerBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.harlan.myapplication.user_address_info" />
+        </activity>
+        <activity android:name="packageapplication.firebase.RestaurantsList" />
+
+        <!-- jxu -->
+        <!-- show all information about one restaurant -->
+        <activity android:name="packageapplication.shoppingcart.detailOfRestaurant"
+            android:theme="@style/CustomerBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.harlan.myapplication.Main2Activity" />
+            </activity>
+
+        <activity android:name="packageapplication.shoppingcart.detailOfShoppingCart"
+            android:theme="@style/CustomerBar">
+        </activity>
+        <activity android:name="packageapplication.shoppingcart.getNotification" />
+
+        <service android:name="packageapplication.shoppingcart.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="packageapplication.shoppingcart.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsartActivity"
+            android:label="@string/title_activity_mapsart" />
+
+        <!-- Adding login_signup page -->
+        <activity android:name="com.example.foodiemore.foodiemore.Login_Signup_Page" />
+        <!-- Adding signup_select page -->
+        <activity android:name="com.example.foodiemore.foodiemore.Sign_up.Signup_select" />
+        <!-- Adding merchant sign up email page -->
+        <activity android:name="com.example.foodiemore.foodiemore.Sign_up.Signup_merchant_email" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.foodiemore.foodiemore.Login_Signup_Page" />
+        </activity>
+        <!-- Adding merchant sign up address page -->
+        <activity android:name="com.example.foodiemore.foodiemore.Sign_up.Signup_merchant_address">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.foodiemore.foodiemore.Sign_up.Signup_merchant_email" />
+        </activity>
+        <!-- Adding consumer sign up email page -->
+        <activity android:name="com.example.foodiemore.foodiemore.Sign_up.Signup_consumer_email"
+            android:theme="@style/CustomerBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.foodiemore.foodiemore.Login_Signup_Page" />
+        </activity>
+
+        <!-- Adding sign up success -->
+        <activity android:name="com.example.foodiemore.foodiemore.Sign_up.Signup_success" />
+
+        <!-- Merchant Page -->
+        <!-- Adding merchant main page -->
+        <activity android:name="com.example.foodiemore.foodiemore.Merchant.Merchant_Main_Page" />
+        <!-- Adding new dishes page -->
+        <activity
+            android:name="com.example.foodiemore.foodiemore.Merchant.Merchant_Add_New_Dish"
+            android:label="Add a new dish">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.foodiemore.foodiemore.Merchant.Merchant_Main_Page" />
+        </activity>
+
+        <!-- Adding merchant information page -->
+        <activity
+            android:name="com.example.foodiemore.foodiemore.Merchant.Merchant_Information_Page"
+            android:label="Information" />
+        <!-- Adding merchant notification page -->
+        <activity
+            android:name="com.example.foodiemore.foodiemore.Merchant.Merchant_Notification_Page"
+            android:label="Notification" />
+        <!-- Adding merchant setting page -->
+        <activity
+            android:name="com.example.foodiemore.foodiemore.Merchant.Merchant_Setting_Page"
+            android:label="Setting" />
+        <!-- Adding merchant information edit page -->
+        <activity
+            android:name="com.example.foodiemore.foodiemore.sign_up_slides.slidesMain"
+            android:label="Sign up"
+            android:theme="@style/AppTheme"
+            />
+        <activity
+            android:name="com.example.foodiemore.foodiemore.Merchant.Merchant_Information_Edit_Page"
+            android:label="Edit Information">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.foodiemore.foodiemore.Merchant.Merchant_Information_Page" />
+        </activity>
+        <activity android:name="com.example.foodiemore.foodiemore.PassPage" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/houseImage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="onClickImage"
+            android:src="@drawable/restaurant_menu_filled" />
+
+        <ImageView
+            android:id="@+id/UserImage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="onClickImage"
+            android:src="@drawable/manager_filled" />
+
+
+        <ImageView
+            android:id="@+id/notificationImage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="onClickImage"
+            android:src="@drawable/notification_filled" />
+
+        <ImageView
+            android:id="@+id/settingImage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="onClickImage"
+            android:src="@drawable/setting" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="3dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        >
+
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            />
+
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            />
+
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            />
+
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:background="#FFFFFF"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/settingList"
+        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        ></ListView>
+
+</LinearLayout>

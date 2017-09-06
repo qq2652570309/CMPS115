@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/customer_log_out"
+        android:orderInCategory="100"
+        android:title="Log out"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:title="search_button"
+        android:id="@+id/searchButton"
+        android:icon="@drawable/search_icon"
+        app:showAsAction="always"
+        android:onClick="menuSearchingOnclick"
+        />
+
+    <item
+        android:title="filter"
+        android:id="@+id/filter"
+        android:icon="@drawable/filter_icon"
+        app:showAsAction="always"
+        android:orderInCategory="100"
+        >
+        <menu>
+            <item android:id="@+id/ratingSort"
+                android:title="sort by rating"
+                app:showAsAction="never"
+                />
+            <item android:id="@+id/waitingSort"
+            android:title="sort by waiting time"
+            app:showAsAction="never"
+            />
+        </menu>
+    </item>
+</menu>
